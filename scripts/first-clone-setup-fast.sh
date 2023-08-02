@@ -4,7 +4,7 @@ set -e
 set -o pipefail
 
 # build setup
-./build-setup.sh fast
+./build-setup.sh
 source sourceme-f1-manager.sh
 
 # run through elaboration flow to get chisel/sbt all setup
