@@ -24,7 +24,7 @@ echo "Firemarshal setup"
 marshal -v build br-base.json
 
 cd $RDIR
-cd target_design/chipyard/generators/gemmini/software/gemmini-rocc-tests
+cd target-design/chipyard/generators/gemmini/software/gemmini-rocc-tests
 echo "Building gemmini-rocc-tests benchmark"
 ./build.sh
 cd $RDIR
