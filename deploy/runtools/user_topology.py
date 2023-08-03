@@ -404,6 +404,13 @@ class UserTopologies:
         self.roots = [FireSimServerNode(hwdb_entries[x]) for x in range(self.no_net_num_nodes)]
 
 
+    def eval_hw_config(self) -> None:
+        hwdb_entries = [
+            "firesim_rerocc_5_gemmini_10_30mhz_xbar",
+            "firesim_rerocc_5_gemmini_10_30mhz_noc"
+        ]
+        assert len(hwdb_entries) == self.no_net_num_nodes
+        self.roots = [FireSimServerNode(hwdb_entries[x]) for x in range(self.no_net_num_nodes)]
 #    ######Used only for tutorial purposes####################
 #    def example_sha3hetero_2config(self):
 #        self.roots= [FireSimSwitchNode()]
