@@ -3,6 +3,8 @@
 set -e
 set -o pipefail
 
+sudo yum install autoconf
+
 # build setup
 ./build-setup.sh
 source sourceme-f1-manager.sh
@@ -24,6 +26,7 @@ echo "Firemarshal setup"
 marshal -v build br-base.json
 
 cd $RDIR
+source sourceme-f1-manager.sh
 cd target-design/chipyard/generators/gemmini/software/gemmini-rocc-tests
 echo "Building gemmini-rocc-tests benchmark"
 ./build.sh
