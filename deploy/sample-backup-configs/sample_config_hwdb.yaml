@@ -64,3 +64,11 @@ vitis_firesim_gemmini_rocket_singlecore_no_nic:
     deploy_triplet_override: FireSim-FireSimLeanGemminiRocketMMIOOnlyConfig-BaseVitisConfig
     custom_runtime_config: null
 
+firesim_rerocc_5_gemmini_10_30mhz_xbar:
+    agfi: agfi-081fede48711a8412
+    deploy_triplet_override: null
+    custom_runtime_config: null
+firesim_rerocc_5_gemmini_10_30mhz_noc:
+    agfi: agfi-042be072e6e2f4b60
+    deploy_triplet_override: null
+    custom_runtime_config: null
