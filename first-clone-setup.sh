@@ -30,4 +30,6 @@ source sourceme-f1-manager.sh
 cd target-design/chipyard/generators/gemmini/software/gemmini-rocc-tests
 echo "Building gemmini-rocc-tests benchmark"
 ./build.sh
+rm -rf build/imagenet
+cp -r ../../../../tests/imagenet build/imagenet
 cd $RDIR
