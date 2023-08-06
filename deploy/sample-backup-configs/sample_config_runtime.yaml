@@ -21,8 +21,8 @@ metasimulation:
   metasimulation_only_vcs_plusargs: "+vcs+initreg+0 +vcs+initmem+0"
 
 target_config:
-    topology: no_net_config
-    no_net_num_nodes: 1
+    topology: eval_hw_config
+    no_net_num_nodes: 2
     link_latency: 6405
     switching_latency: 10
     net_bandwidth: 200
@@ -59,7 +59,7 @@ autocounter:
     read_rate: 0
 
 workload:
-    workload_name: linux-uniform.json
+    workload_name: gemmini-tests-workload.json
     terminate_on_completion: no
     suffix_tag: null
 
