@@ -19,17 +19,29 @@ cd ../sim
 echo "chisel/sbt setup"
 make f1
 
+cd $RDIR
+cd target-design/chipyard/tests
+rm -rf imagenet
+unzip sample.zip
+rm sample.zip
+
+cd $RDIR
+source sourceme-f1-manager.sh
+cd target-design/chipyard/generators/gemmini/software/gemmini-rocc-tests
+./build.sh
+rm -rf build/imagenet
+cp -r ../../../../tests/imagenet build/imagenet
+
+cd $RDIR
 # build target software
-cd ../sw/firesim-software
+cd sw/firesim-software
 echo "Firemarshal setup"
 ./init-submodules.sh
 marshal -v build br-base.json
 
 cd $RDIR
-source sourceme-f1-manager.sh
-cd target-design/chipyard/generators/gemmini/software/gemmini-rocc-tests
-echo "Building gemmini-rocc-tests benchmark"
-./build.sh
-rm -rf build/imagenet
-cp -r ../../../../tests/imagenet build/imagenet
+echo "Generating workload images"
+cd target-design/chipyard/generators/gemmini/software
+./build-gemmini-workload.sh
+
 cd $RDIR

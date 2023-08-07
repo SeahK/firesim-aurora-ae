@@ -210,13 +210,6 @@ fi
 
 cd "$RDIR"
 
-cd target-design/chipyard/tests
-rm -rf imagenet
-unzip imagenet.zip
-rm imagenet.zip
-
-cd "$RDIR"
-
 # commands to run only on EC2
 # see if the instance info page exists. if not, we are not on ec2.
 # this is one of the few methods that works without sudo
