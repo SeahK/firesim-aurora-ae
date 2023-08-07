@@ -211,6 +211,7 @@ fi
 cd "$RDIR"
 
 cd target-design/chipyard/tests
+rm -rf imagenet
 unzip imagenet.zip
 rm imagenet.zip
 
