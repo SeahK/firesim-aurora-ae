@@ -8,8 +8,8 @@ from matplotlib import pyplot as plt
 #END_POINT = 170
 #DROP = 1/12
 DROP = 1/16#(1-(1/1.1))
-BASE_END_POINT = 150
-END_POINT = 150
+BASE_END_POINT = 140
+END_POINT = 140
 #BASE_END_POINT = 160
 #END_POINT = 160
 K = 15

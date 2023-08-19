@@ -19,8 +19,8 @@ soc_type = ['crossbar', 'noc']
 #BASE_END_POINT = 120
 #END_POINT = 180
 
-BASE_END_POINT = 140
-END_POINT = 140
+BASE_END_POINT = 170
+END_POINT = 170
 
 QOS = 3
 num_workload = [[] for i in range(QOS)]
