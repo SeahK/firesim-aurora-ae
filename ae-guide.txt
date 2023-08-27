@@ -1,1 +1,7 @@
-initial
+* Please contact SLICE support (slice-support@eecs.berkeley.edu) if you need assistance in setting up your AWS instance.
+* Please reach out to the author (seah@berkeley.edu) if you need further guidance.
+* For AWS account setup, please follow the latest FireSim documentation. https://docs.fires.im/en/1.17.0/Getting-Started-Guides/AWS-EC2-F1-Getting-Started/Initial-Setup/Configuring-Required-Infrastructure-in-Your-AWS-Account.html
+Python-pip package has been changed in FireSim 1.17.0 (sudo yum install -y python3-pip) from FireSim 1.16.0 (sudo yum install -y python36-pip). 
+* Please make sure your number of created VPC has not already reached to limit, as configuring AWS infrastructure for FireSim stage would create new VPC named firesim.
+* Please make sure chmod is done correctly for firesim.pem to ssh scp into instances. Please do ``chmod 600 firesim.pem''
+* Please do scp firesim.pem to manager instance, instead of manually copying contents.
