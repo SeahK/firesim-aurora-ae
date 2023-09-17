@@ -13,6 +13,7 @@ RDIR=$(pwd)
 
 cd deploy
 firesim managerinit --platform f1
+cp -r scripts/* results-workload/
 
 # run through elaboration flow to get chisel/sbt all setup
 cd ../sim
